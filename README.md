@@ -22,6 +22,12 @@ Backend `backend/.env`:
 NODE_ENV=development
 PORT=4000
 CORS_ORIGIN=http://localhost:5173
+# SESSION_SECRET: Used to cryptographically sign session cookies for security.
+# Generate a strong random secret using one of these methods:
+#   - OpenSSL: openssl rand -base64 32
+#   - Node.js: node -e "console.log(require('crypto').randomBytes(32).toString('base64'))"
+#   - Online generator: https://generate-secret.vercel.app/32
+# Keep this secret secure and never commit it to version control.
 SESSION_SECRET=replace_with_strong_secret
 # Note: postgres:postgres = username:password (the second 'postgres' is the password).
 # You can replace these with your own DB username/password if you use custom credentials.
